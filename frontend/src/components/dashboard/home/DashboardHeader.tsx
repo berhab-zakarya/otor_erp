@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from '@radix-ui/react-avatar'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image';
 import React from 'react'
@@ -16,7 +16,7 @@ export const DashboardHeader = () => {
         year: "numeric",
     });
     return (
-        <header className="h-[100px] flex items-center justify-between px-[30px] p-[16px] ">
+        <header className="h-[100px] flex items-center justify-between  ">
             <div className="flex flex-col">
                 <div className='flex items-center'>
                     <h3 className='mr-1 font-extrabold text-[20px]'>
@@ -39,7 +39,7 @@ export const DashboardHeader = () => {
 
                 <button
                     type="button"
-                    className="group p-2 hover:bg-[#F2F7FF] transition-colors cursor-pointer"
+                    className="group p-2  transition-colors cursor-pointer"
                     aria-label="Notifications"
                 >
                     <Image
@@ -47,18 +47,18 @@ export const DashboardHeader = () => {
                         alt="notification"
                         width={15}
                         height={15}
-                        className="transition-transform duration-200 group-hover:scale-110 group-hover:bg-[#F2F7FF]"
+                        className="transition-transform duration-200 group-hover:scale-110 group-"
                     />
                 </button>
 
 
                 <button
                     type="button"
-                    className="flex items-center gap-2 rounded-lg cursor-pointer hover:bg-[#F2F7FF] py-2 transition-colors group"
+                    className="flex items-center gap-2 rounded-lg cursor-pointer  py-2 transition-colors group"
                 >
                     <div className="flex items-center gap-2">
                         <Avatar className="bg-primary w-10 h-10 flex justify-center items-center">
-                            <AvatarFallback className="text-white font-black">
+                            <AvatarFallback className="text-black font-black">
                                 {userName.charAt(0)}
                             </AvatarFallback>
                         </Avatar>
