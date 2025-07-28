@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { nunito, poppins, jetbrainsMono } from "@/utils/fonts"; // إن فصلتها في ملف منفصل
+import { nunito, poppins } from "@/utils/fonts"; // إن فصلتها في ملف منفصل
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${nunito.className} ${poppins.className} ${jetbrainsMono.className}`}>
+    <html lang="en" className={`${nunito.className} ${poppins.className} `}>
       <body className="antialiased font-sans">{children}</body>
     </html>
   );

@@ -44,13 +44,13 @@ export function AppSidebar() {
                                             <SidebarMenuButton
                                                 className={clsx(
                                                     "h-full rounded-none  w-full flex items-center gap-2 px-3",
-                                                    isActive ? "text-primary bg-primary-foreground" : "text-texts-black"
+                                                    isActive ? "text-primary bg-primary-foreground" : "text-texts-black tracking-wider "
                                                 )}
                                                 asChild
                                             >
-                                                <a href={item.url} className="flex items-center gap-2 w-full">
+                                                <a href={item.url} className={`flex items-center gap-2 w-full ${isActive? "pl-[20px]" : "pl-[30px]"}` }>
                                                     <item.icon className={clsx("w-5 h-5", isActive ? "text-primary" : "text-texts-black")} />
-                                                    <span className={clsx(isActive ? "text-primary" : "text-texts-black")}>
+                                                    <span className={clsx(isActive ? "text-primary" : "text-texts-black","text-sm")}>
                                                         {item.title}
                                                     </span>
                                                 </a>
