@@ -1,4 +1,5 @@
-import { MemoItem, PaymentVoucher, StaffItem, StatDashboardCardData } from "@/types/statistics";
+import { ChartConfig } from "@/components/ui/chart";
+import { MemoItem, PaymentVoucher, StaffItem, StatDashboardCardData, StatisticsCount, StatisticsPie } from "@/types/statistics";
 import {
   LayoutDashboard,
   Users,
@@ -182,6 +183,34 @@ export const paymentVouchers: PaymentVoucher[] = [
   { id: 4, subject: "Team Lunch", date: "2025-07-15", status: "rejected", amount: 12000, color: "#E54F53" },     // أحمر
 ];
 
+export const countStatistics:StatisticsCount={
+  approved:10,
+  pending:30,
+  rejected:90
+}
+
+export const chartData:StatisticsPie[] = [
+  { status: "pending", count: countStatistics.pending, fill: "#F29421" },
+  { status: "approved", count: countStatistics.approved, fill: "#10A142" },
+  { status: "rejected", count: countStatistics.rejected, fill: "#E54F53" },
+]
+
+export const chartConfig = {
+
+    pending: {
+        label: "Pending",
+        color: "#ff0000",
+    },
+    approved: {
+        label: "Approved",
+        color: "#ff0000",
+    },
+    rejected: {
+        label: "Rejected",
+        color: "#ff0000",
+    },
+
+} satisfies ChartConfig
 
 
 export  const columnsMemo = ['S/N', 'Memo Title', 'Sent From', 'Sent To', 'Status'];

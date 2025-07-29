@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${nunito.className} ${poppins.className} `}>
+    <html lang="en" className={`${nunito.className} ${poppins.className} overflow-hidden `}>
       <body className="antialiased font-sans">{children}</body>
     </html>
   );

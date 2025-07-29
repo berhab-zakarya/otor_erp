@@ -46,3 +46,15 @@ export interface PaymentVoucher {
   amount: number;
   color: string; // اللون المرتبط بالحالة
 }
+
+export interface StatisticsCount{
+  approved:number;
+  pending:number;
+  rejected:number;
+}
+
+export interface StatisticsPie{
+  status:string;
+  count:number;
+  fill:string;
+}

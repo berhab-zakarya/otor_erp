@@ -1,11 +1,10 @@
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { ChevronDown } from 'lucide-react'
+
 import Image from 'next/image';
 import React from 'react'
+import MenuProfile from './MenuProfile';
 
 export const DashboardHeader = () => {
      const userName = "Zakarya Berhab";
-    const jobName = "HR Office";
 
     const today = new Date();
 
@@ -52,25 +51,7 @@ export const DashboardHeader = () => {
                 </button>
 
 
-                <button
-                    type="button"
-                    className="flex items-center gap-2 rounded-lg cursor-pointer  py-2 transition-colors group"
-                >
-                    <div className="flex items-center gap-2">
-                        <Avatar className="bg-primary w-10 h-10 flex justify-center items-center">
-                            <AvatarFallback className="text-black font-black">
-                                {userName.charAt(0)}
-                            </AvatarFallback>
-                        </Avatar>
-                        <div className="flex flex-col gap-0.5 text-left">
-                            <p className="leading-none m-0 text-[14px]">{userName}</p>
-                            <p className="leading-none m-0 text-[12px]">{jobName}</p>
-                        </div>
-                    </div>
-                    <div>
-                        <ChevronDown className="transition-transform group-hover:rotate-180" />
-                    </div>
-                </button>
+            <MenuProfile/>
 
             </div>
         </header>

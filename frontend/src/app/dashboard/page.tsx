@@ -9,7 +9,7 @@ export default function Dashboard() {
 
 
     return (
-        <main className='min-h-screen flex flex-col px-[30px] '>
+        <main className='min-h-screen flex flex-col px-[30px] mb-8 '>
             <DashboardHeader />
             <DashboardStatisticsMini />
             <DashboardStatisticsDetailed/>
