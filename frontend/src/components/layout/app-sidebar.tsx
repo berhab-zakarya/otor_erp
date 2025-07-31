@@ -11,10 +11,10 @@ import {
     SidebarHeader,
 } from "@/components/ui/sidebar"
 import { sidebarItems } from "@/constants/constants"
-import { getLogo } from "@/utils/icons"
 import { usePathname } from "next/navigation"
 import React from 'react'
 import clsx from "clsx"
+import OtorLogo from "./logo"
 
 export function AppSidebar() {
     const pathname = usePathname();
@@ -22,7 +22,7 @@ export function AppSidebar() {
     return (
         <Sidebar>
             <SidebarHeader className="flex justify-center items-center h-[181px]">
-                <Header />
+                <OtorLogo />
             </SidebarHeader>
 
             <SidebarContent>
@@ -67,14 +67,3 @@ export function AppSidebar() {
     )
 }
 
-const Header = () => {
-    return (
-        <div className="flex flex-col justify-center items-center">
-            {getLogo({ height: 35.5, width: 35.5 })}
-            <div className="flex flex-col justify-center items-center">
-                <p className="text-primary-gradient text-sm font-bold my-1 p-0 leading-none">UiUxOtor</p>
-                <p className="m-0 p-0 text-[13px] text-[#272525] leading-none">ERP System</p>
-            </div>
-        </div>
-    )
-}
