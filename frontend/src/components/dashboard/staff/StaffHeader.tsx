@@ -1,15 +1,15 @@
 
 import Image from 'next/image';
 import React from 'react'
-import MenuProfile from '../../layout/MenuProfile';
-import WelcomeMessage from './WelcomeMessage';
+import MenuProfile from '@/components/layout/MenuProfile';
+import {  Users } from 'lucide-react';
+import TitleHeader from '@/components/layout/title-header';
 
-export const DashboardHeader = () => {
-    const userName = "Zakarya Berhab";
- 
+export const StaffHeader = () => {
+
     return (
         <header className="h-[100px] flex items-center justify-between  ">
-            <WelcomeMessage name={userName}  />
+          <TitleHeader title="All Staff" description="View, search for and add new staff" icon={Users}/>
             <div className="flex max-w-[232px] w-full justify-between items-center ">
 
                 <button
@@ -27,7 +27,7 @@ export const DashboardHeader = () => {
                 </button>
 
 
-            <MenuProfile/>
+                <MenuProfile />
 
             </div>
         </header>

@@ -13,8 +13,6 @@ export default function Dashboard() {
             <DashboardHeader />
             <DashboardStatisticsMini />
             <DashboardStatisticsDetailed/>
-            
-
         </main>
     )
 }

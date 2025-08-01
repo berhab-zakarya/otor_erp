@@ -1,11 +1,10 @@
 import React from 'react'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { ChevronDown, LogOut, LogOutIcon, SettingsIcon, UserIcon } from 'lucide-react'
+import { ChevronDown, LogOut,  SettingsIcon, UserIcon } from 'lucide-react'
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 const MenuProfile = () => {
